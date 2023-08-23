@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rules Management</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    label.file-upload {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 4px;
+      margin-right: 10px;
+    }
+
+    label.file-upload:hover {
+      background-color: #45a049;
+    }
+
+    button {
+      background-color: #008CBA;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #007a99;
+    }
+
+    #resultSection {
+      margin-top: 20px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <label for="csvFileInput" class="file-upload">Select CSV File</label>
+  <input type="file" id="csvFileInput" accept=".csv">
+  <button id="generateRulesBtn">Generate Random Rules</button>
+  <button id="checkMutuallyExclusiveBtn">Check Mutually Exclusive</button>
+
+  <!-- Added div element to show the result -->
+  <div id="resultSection"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
